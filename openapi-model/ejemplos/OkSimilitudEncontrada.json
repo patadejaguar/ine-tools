@@ -1,0 +1,6 @@
+{
+"estatus": "OK",
+"mensaje": "Similitud de rostros encontrada",
+"Similitud": 80,
+"codigoValidacion" : "idunico-uuid"
+}
