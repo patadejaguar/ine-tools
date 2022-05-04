@@ -5,7 +5,7 @@ import cv2
 
 proc1 = redu.INEReduce();
 
-imgTest = cfg.PATH_BASE + "test_4.jpg"
+imgTest = cfg.PATH_BASE + "test_3.jpg"
 
 
 image = cv2.imread(imgTest)

@@ -99,7 +99,13 @@ class INEReduce():
 
                 # Using Image to crop and save the extracted copied image
                 im = Image.open(imageIn)
-                im.crop((left, top, right, bottom)).save(imageOut, quality=95)
+                im = im.crop((left, top, right, bottom))
+                
+                w, h = im.size
+                if h > w:
+                    im = im.rotate(90, expand=True)
+                #
+                im.save(imageOut, quality=95)
 
                 if inDebug == True:
                     cv2.imshow('ID-CARD-DETECTOR : ', image)
