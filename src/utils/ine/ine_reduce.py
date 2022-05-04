@@ -19,7 +19,7 @@ class INEReduce():
     def __init__(self):
         self.data = []
         
-    def reduce(self, imageIn, imageOut):
+    def reduce(self, imageIn, imageOut, inDebug=False):
         NUM_CLASSES = 1
         # Load the label map.
         # Label maps map indices to category names, so that when our convolution
@@ -101,15 +101,15 @@ class INEReduce():
                 im = Image.open(imageIn)
                 im.crop((left, top, right, bottom)).save(imageOut, quality=95)
 
-                cv2.imshow('ID-CARD-DETECTOR : ', image)
-
-                image_cropped = cv2.imread(imageOut)
-                cv2.imshow("ID-CARD-CROPPED : ", image_cropped)
-
-                # All the results have been drawn on image. Now display the image.
-                #cv2.imshow('ID CARD DETECTOR', image)
-                # Press any key to close the image
-                cv2.waitKey(0)
-
-                # Clean up
-                cv2.destroyAllWindows()
+                if inDebug == True:
+                    cv2.imshow('ID-CARD-DETECTOR : ', image)
+                    image_cropped = cv2.imread(imageOut)
+                    cv2.imshow("ID-CARD-CROPPED : ", image_cropped)
+    
+                    # All the results have been drawn on image. Now display the image.
+                    #cv2.imshow('ID CARD DETECTOR', image)
+                    # Press any key to close the image
+                    cv2.waitKey(0)
+    
+                    # Clean up
+                    cv2.destroyAllWindows()
