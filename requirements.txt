@@ -14,7 +14,7 @@ kiwisolver
 Markdown
 matplotlib
 numpy
-object-detection-0.1
+object-detection
 opencv-python
 opt-einsum
 Pillow
