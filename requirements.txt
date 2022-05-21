@@ -13,7 +13,6 @@ Keras-Preprocessing
 kiwisolver
 Markdown
 matplotlib
-numpy
 object-detection
 opencv-python
 opt-einsum
